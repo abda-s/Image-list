@@ -1,11 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Searchinput from "./SearchInput";
+// import Searchinput from "./SearchInput";
 const App = () => {
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+        // Your form submission logic here
+      };
   return (
     <div>
       <div className="ui segment">
-        <form className="ui form" onSubmit={this.onFormSubmit}>
+        <form className="ui form" onSubmit={onFormSubmit}>
           <div className="field">
             <div className="ui massive icon input">
               <input type="text" placeholder="Search..." />
