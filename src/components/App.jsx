@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import SearchInput from "./SearchInput";
 const App = () => {
   return (
-    <div>
+    <div className="ui container" style={{ marginTop: 30 }}>
       <SearchInput />
     </div>
   );
