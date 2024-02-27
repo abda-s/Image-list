@@ -1,20 +1,26 @@
 import React from "react";
+import ReactDOM from "react-dom";
 
-export default function SearchInput() {
-  const onFormSubmit = (event) => {
+class SearchInput extends React.Component {
+  onFormSubmit(event){
     event.preventDefault();
     // Your form submission logic here
   };
-  return (
-    <div className="ui segment">
-      <form className="ui form" onSubmit={onFormSubmit}>
-        <div className="field">
-          <div className="ui massive icon input">
-            <input type="text" placeholder="Search..." />
-            <i className="search icon"></i>
-          </div>
+  render(){
+    return (
+        <div className="ui segment">
+          <form className="ui form" onSubmit={this.onFormSubmit}>
+            <div className="field">
+              <div className="ui massive icon input">
+                <input type="text" placeholder="Search..." />
+                <i className="search icon"></i>
+              </div>
+            </div>
+          </form>
         </div>
-      </form>
-    </div>
-  );
+      );
+  }
+
 }
+
+export default SearchInput;
